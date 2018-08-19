@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/* CSS Variables */
+:root {
+  --primary-color: #b90415;
+  --primary-color-hover: #d3071b;
+  --secondary-color: #103063;
+  --secondary-color-hover: #143f85;
+  --light-color: #f4f4f4;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  background-color: #252529;
+  margin: 0;
+  color: #fff;
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+/* Section */
+.section {
+  padding: 2rem 0;
+}
+
+.section-head {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.section h3 {
+  font-size: 2rem;
+}
+
+section#entertainment {
+  background: url(../img/section-bg.jpg) no-repeat bottom/cover;
+  padding: 10rem 0;
+}
+
+.gift-cards {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: left;
+}
+
+/* Showcase */
+#showcase {
+  margin: 0;
+  padding: 0;
+  background: url('../img/showcase.jpg') no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+}
+
+#showcase .container {
+  margin-top: 25vh;
+}
+
+#showcase h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+#showcase h2 {
+  font-size: 2rem;
+}
+
+/* Footer */
+footer .footer-cols {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  text-align: left;
+  font-size: 14px;
+}
+
+footer .footer-cols ul {
+  list-style: none;
+}
+
+footer .footer-cols ul li:first-child {
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: #444 solid 1px;
+  margin-bottom: 1rem;
+}
+
+footer .footer-bottom {
+  background: #333;
+  padding: 1rem;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1180px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.lead {
+  font-size: 1.3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  padding: 1rem;
+  color: #fff;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background: var(--primary-color-hover);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-color-hover);
+}
+
+/* Text colors */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-light {
+  color: var(--light-color);
+}
+
+.bg-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+.mt {
+  margin-top: 1rem;
+}
+
+/* Navigation */
+nav {
+  height: 40px;
+  width: 100%;
+  background-color: #333;
+  color: #eee;
+  position: fixed;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  display: inline;
+  float: left;
+}
+nav a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  color: #eee;
+  text-decoration: none;
+}
+nav li:hover {
+  background-color: #444;
+}
+nav a#openup {
+  display: none;
+}
+
+@media screen and (max-width: 580px) {
+  .hide-on-small {
+    display: none;
+  }
+
+  #showcase {
+    height: 50vh;
+  }
+
+  #showcase .container {
+    margin-top: 15vh;
+  }
+
+  #showcase h1 {
+    font-size: 3rem;
+  }
+
+  #showcase h2 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    height: auto;
+    border-bottom: 0;
+  }
+  nav ul {
+    display: none;
+    height: auto;
+  }
+  nav li {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+  nav a {
+    text-align: left;
+    width: 100%;
+    text-indent: 25px;
+    background: #333;
+    border-bottom: 1px solid #555;
+  }
+  nav a:hover {
+    background: #444;
+  }
+  nav a#openup:after {
+    content: '|||';
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-90deg);
+    /* Safari and Chrome */
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 20px;
+  }
+  nav a#openup {
+    display: block;
+    background-color: #333;
+    width: 100%;
+    position: relative;
+  }
+}
+.cf:before,
+.cf:after {
+  content: '';
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
+@media screen and (max-width: 780px) {
+  .gift-cards {
+    grid-template-columns: 1fr;
+  }
+
+  footer .footer-cols {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 580px) {
+  #showcase p.lead {
+    display: none;
+  }
+}
