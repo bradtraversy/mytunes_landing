@@ -1,0 +1,15 @@
+{
+  "name": "mytunes_landing",
+  "version": "1.0.0",
+  "description": "Simple landing page website",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "homepage": "https://bradtraversy.github.io/mytunes_landing",
+  "author": "Brad Traversy",
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^1.2.0"
+  }
+}
